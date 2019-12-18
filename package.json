@@ -1,0 +1,27 @@
+{
+	"name": "empowered-conversations",
+	"version": "1.0.0",
+	"description": "Lambda Build Week 1 - Marketing Site",
+	"main": "index.js",
+	"scripts": {
+		"start": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BW-Empowered-Conversations-20191217/empowered-convos-marketing-2.git"
+	},
+	"author": "Sebastian Garces",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/BW-Empowered-Conversations-20191217/empowered-convos-marketing-2/issues"
+	},
+	"homepage": "https://github.com/BW-Empowered-Conversations-20191217/empowered-convos-marketing-2#readme",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.0",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5"
+	}
+}
