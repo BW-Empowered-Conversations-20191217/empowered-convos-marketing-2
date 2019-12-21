@@ -1,1 +1,3 @@
-
+.main-content {
+	@include displayFlex(column, flex-start, center);
+}
