@@ -16,3 +16,10 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin addImage($link, $repeat, $size, $position) {
+	background-image: url($link);
+	background-repeat: $repeat;
+	background-size: $size;
+	background-position: $position;
+}
