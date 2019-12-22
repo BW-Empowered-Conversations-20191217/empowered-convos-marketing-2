@@ -7,7 +7,7 @@
 		width: 90%;
 
 		.content-first-img {
-			background-image: url(/src/assets/img/man-holding-pink-sign-with-dots.png);
+			background-image: url(/src/assets/img/man-holding-pink-sign-with-dots.webp);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
@@ -25,7 +25,7 @@
 		&:nth-child(2) {
 			@include displayFlex(row-reverse, space-evenly, center);
 			.content-second-img {
-				background-image: url(/src/assets/img/woman-holding-yellow-sign-with-dots.png);
+				background-image: url(/src/assets/img/woman-holding-yellow-sign-with-dots.webp);
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: center;
@@ -35,7 +35,7 @@
 		}
 
 		.content-third-img {
-			background-image: url(/src/assets/img/woman-smiling-while-holding-pink-sign-with-dots.png);
+			background-image: url(/src/assets/img/woman-smiling-while-holding-pink-sign-with-dots.webp);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
@@ -54,7 +54,7 @@
 	}
 
 	.cta-img {
-		background-image: url(/src/assets/img/group-of-people-holding-signs-with-dots.png);
+		background-image: url(/src/assets/img/group-of-people-holding-signs-with-dots.webp);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: center;
