@@ -1,0 +1,65 @@
+.main-content {
+	@include displayFlex(column, center, center);
+	margin: 10rem 0;
+
+	.content-container {
+		@include displayFlex(row, space-evenly, center);
+		width: 90%;
+
+		.content-first-img {
+			background-image: url(https://i.ibb.co/tBSTtz2/man-holding-pink-sign-with-dots.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 50vh;
+			height: 65vh;
+		}
+
+		.content-text {
+			@include displayFlex(column, center, center);
+
+			max-width: 40%;
+			margin: 0 3rem;
+		}
+
+		&:nth-child(2) {
+			@include displayFlex(row-reverse, space-evenly, center);
+			.content-second-img {
+				background-image: url(https://i.ibb.co/cgQtWpf/woman-holding-yellow-sign-with-dots.png);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				width: 50vh;
+				height: 65vh;
+			}
+		}
+
+		.content-third-img {
+			background-image: url(https://i.ibb.co/HXdGv0Y/woman-smiling-while-holding-pink-sign-with-dots.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 50vh;
+			height: 65vh;
+		}
+	}
+}
+
+.cta {
+	@include displayFlex(column, center, center);
+	h2,
+	.large-btn,
+	.cta-img {
+		margin: 1em;
+	}
+
+	.cta-img {
+		background-image: url(https://i.ibb.co/1dcC6c4/group-of-people-holding-signs-with-dots.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 80%;
+		height: 85vh;
+		margin: 10rem 0;
+	}
+}
