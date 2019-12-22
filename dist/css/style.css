@@ -159,10 +159,88 @@ template {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 10rem 0; }
+  .main-content .content-container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 90%; }
+    .main-content .content-container .content-first-img {
+      background-image: url(https://i.ibb.co/tBSTtz2/man-holding-pink-sign-with-dots.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 50vh;
+      height: 65vh; }
+    .main-content .content-container .content-text {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      max-width: 40%;
+      margin: 0 3rem; }
+    .main-content .content-container:nth-child(2) {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      flex-direction: row-reverse;
+      -webkit-box-pack: space-evenly;
+      justify-content: space-evenly;
+      -webkit-box-align: center;
+      align-items: center; }
+      .main-content .content-container:nth-child(2) .content-second-img {
+        background-image: url(https://i.ibb.co/cgQtWpf/woman-holding-yellow-sign-with-dots.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 50vh;
+        height: 65vh; }
+    .main-content .content-container .content-third-img {
+      background-image: url(https://i.ibb.co/HXdGv0Y/woman-smiling-while-holding-pink-sign-with-dots.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 50vh;
+      height: 65vh; }
+
+.cta {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   align-items: center; }
+  .cta h2,
+  .cta .large-btn,
+  .cta .cta-img {
+    margin: 1em; }
+  .cta .cta-img {
+    background-image: url(https://i.ibb.co/1dcC6c4/group-of-people-holding-signs-with-dots.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    height: 85vh;
+    margin: 10rem 0; }
 
 html {
   font-size: 16px; }
@@ -266,13 +344,11 @@ header {
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
-    margin: 15vh 0;
-    width: 90%;
-    padding-bottom: 5rem; }
+    width: 90%; }
     header .hero-section .hero-text {
       color: #fff;
       text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
-      font-size: 1.2vw;
+      font-size: 1vw;
       max-width: 800px; }
       header .hero-section .hero-text font h1,
       header .hero-section .hero-text button {
@@ -283,21 +359,79 @@ header {
         letter-spacing: 1pt; }
     header .hero-section div {
       margin: 3rem; }
-    header .hero-section .hero-svg {
-      width: 100%;
-      height: 100%;
-      max-width: 800px;
-      max-height: 800px; }
+    header .hero-section .hero-img {
+      background-image: url(https://i.ibb.co/xs8HhkH/man-holding-yellow-sign-with-dots.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 50vh;
+      height: 65vh;
+      position: relative;
+      top: 18vh; }
 
-.btn {
+.btn,
+.large-btn {
   border: 2px solid #ffffff;
   box-sizing: border-box;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
   border-radius: 29.5px;
-  padding: 0.4em 2rem; }
+  padding: 0.4em 2rem;
+  cursor: pointer; }
+
+.large-btn {
+  padding: 1em 5rem;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50px; }
 
 .no-fill {
   background-color: transparent; }
 
 .filled {
   background-color: #fff; }
+
+.cta .large-btn {
+  background-color: #c2ffe9; }
+
+footer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  background-color: #5440c0;
+  color: #fff;
+  padding: 5rem; }
+  footer div {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 5;
+    opacity: 0.3; }
+    footer div img,
+    footer div a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.2rem; }
+
+footer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.79%, rgba(255, 255, 255, 0.58)), to(transparent));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  z-index: 0; }
