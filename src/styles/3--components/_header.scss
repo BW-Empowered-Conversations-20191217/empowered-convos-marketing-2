@@ -4,7 +4,7 @@ header::after {
 	height: 100%;
 	position: absolute;
 	background: linear-gradient(
-		228.64deg,
+		230deg,
 		rgba(255, 255, 255, 0.58) 0.79%,
 		transparent
 	);
@@ -19,18 +19,23 @@ header {
 	z-index: 1;
 	position: relative;
 
+	// NAVBAR
+
 	nav,
 	.hero-section {
-		z-index: 500;
+		z-index: 300;
 	}
 
 	nav {
-		@include displayFlex(row, space-between, center);
-		width: 90%;
-		margin: 1rem 0;
+		@include displayFlex(row, space-around, center);
+		width: 100%;
+		padding: 1rem 5%;
 		.logo {
 			margin-right: auto;
 		}
+		position: fixed;
+		transition: all 150ms ease-in-out;
+		z-index: 500;
 
 		a {
 			margin: 0 2rem;
@@ -46,11 +51,13 @@ header {
 		}
 	}
 
+	// HERO-SECTION
+
 	.hero-section {
 		@include displayFlex(row, center, center);
 		// margin: 15vh 0;
 		width: 90%;
-		// padding-bottom: 5rem;
+		padding-top: 102px;
 
 		.hero-text {
 			color: color(text);
@@ -58,15 +65,13 @@ header {
 			font-size: 1vw;
 			max-width: 800px;
 
-			font h1,
+			h1,
 			button {
 				margin: 1.5rem 0;
 			}
 
 			button {
 				color: color(primary);
-				font-weight: bold;
-				letter-spacing: 1pt;
 			}
 		}
 
@@ -75,13 +80,20 @@ header {
 		}
 
 		.hero-img {
-			background-image: url(/src/assets/img/man-holding-yellow-sign-with-dots.webp);
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 50vh;
-			height: 65vh;
 			position: relative;
 			top: 18vh;
+			@include size(50vh, 65vh);
+			@include addImage(
+				"/src/assets/img/man-holding-yellow-sign-with-dots.webp",
+				no-repeat,
+				contain,
+				center
+			);
 		}
 	}
+}
+
+.navBar-bg {
+	background-color: rgba(84, 64, 192, 1);
+	padding: 0.5rem 5%;
 }

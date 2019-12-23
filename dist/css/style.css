@@ -153,6 +153,9 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
 .main-content {
   display: -webkit-box;
   display: flex;
@@ -176,12 +179,12 @@ template {
     align-items: center;
     width: 90%; }
     .main-content .content-container .content-first-img {
-      background-image: url(/src/assets/img/man-holding-pink-sign-with-dots.webp);
+      width: 50vh;
+      height: 65vh;
+      background-image: url("/src/assets/img/man-holding-pink-sign-with-dots.webp");
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: center;
-      width: 50vh;
-      height: 65vh; }
+      background-position: center; }
     .main-content .content-container .content-text {
       display: -webkit-box;
       display: flex;
@@ -190,10 +193,13 @@ template {
       flex-direction: column;
       -webkit-box-pack: center;
       justify-content: center;
-      -webkit-box-align: center;
-      align-items: center;
+      -webkit-box-align: start;
+      align-items: flex-start;
       max-width: 40%;
       margin: 0 3rem; }
+      .main-content .content-container .content-text p {
+        font-size: 1.5rem;
+        opacity: 0.7; }
     .main-content .content-container:nth-child(2) {
       display: -webkit-box;
       display: flex;
@@ -205,19 +211,19 @@ template {
       -webkit-box-align: center;
       align-items: center; }
       .main-content .content-container:nth-child(2) .content-second-img {
-        background-image: url(/src/assets/img/woman-holding-yellow-sign-with-dots.webp);
+        width: 50vh;
+        height: 65vh;
+        background-image: url("/src/assets/img/woman-holding-yellow-sign-with-dots.webp");
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
-        width: 50vh;
-        height: 65vh; }
+        background-position: center; }
     .main-content .content-container .content-third-img {
-      background-image: url(/src/assets/img/woman-smiling-while-holding-pink-sign-with-dots.webp);
+      width: 50vh;
+      height: 65vh;
+      background-image: url("/src/assets/img/woman-smiling-while-holding-pink-sign-with-dots.webp");
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: center;
-      width: 50vh;
-      height: 65vh; }
+      background-position: center; }
 
 .cta {
   display: -webkit-box;
@@ -234,13 +240,13 @@ template {
   .cta .cta-img {
     margin: 1em; }
   .cta .cta-img {
-    background-image: url(/src/assets/img/group-of-people-holding-signs-with-dots.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    margin: 10rem 0;
     width: 80%;
     height: 85vh;
-    margin: 10rem 0; }
+    background-image: url("/src/assets/img/group-of-people-holding-signs-with-dots.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
 
 html {
   font-size: 16px; }
@@ -290,7 +296,7 @@ header::after {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(228.64deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
+  background: linear-gradient(230deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
   mix-blend-mode: normal;
   opacity: 0.6;
   z-index: 0; }
@@ -310,19 +316,22 @@ header {
   position: relative; }
   header nav,
   header .hero-section {
-    z-index: 500; }
+    z-index: 300; }
   header nav {
     display: -webkit-box;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: space-around;
     -webkit-box-align: center;
     align-items: center;
-    width: 90%;
-    margin: 1rem 0; }
+    width: 100%;
+    padding: 1rem 5%;
+    position: fixed;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    z-index: 500; }
     header nav .logo {
       margin-right: auto; }
     header nav a {
@@ -344,29 +353,33 @@ header {
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
-    width: 90%; }
+    width: 90%;
+    padding-top: 102px; }
     header .hero-section .hero-text {
       color: #fff;
       text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
       font-size: 1vw;
       max-width: 800px; }
-      header .hero-section .hero-text font h1,
+      header .hero-section .hero-text h1,
       header .hero-section .hero-text button {
         margin: 1.5rem 0; }
       header .hero-section .hero-text button {
-        color: #5440c0;
-        font-weight: bold;
-        letter-spacing: 1pt; }
+        color: #5440c0; }
     header .hero-section div {
       margin: 3rem; }
     header .hero-section .hero-img {
-      background-image: url(/src/assets/img/man-holding-yellow-sign-with-dots.webp);
-      background-repeat: no-repeat;
-      background-size: contain;
+      position: relative;
+      top: 18vh;
       width: 50vh;
       height: 65vh;
-      position: relative;
-      top: 18vh; }
+      background-image: url("/src/assets/img/man-holding-yellow-sign-with-dots.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center; }
+
+.navBar-bg {
+  background-color: #5440c0;
+  padding: 0.5rem 5%; }
 
 .btn,
 .large-btn {
@@ -375,12 +388,13 @@ header {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
   border-radius: 29.5px;
   padding: 0.4em 2rem;
-  cursor: pointer; }
+  cursor: pointer;
+  letter-spacing: 1pt; }
 
 .large-btn {
-  padding: 1em 5rem;
+  padding: 0.8em 5rem;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   border-radius: 50px; }
 
 .no-fill {
