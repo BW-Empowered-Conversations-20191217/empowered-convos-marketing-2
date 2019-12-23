@@ -23,16 +23,19 @@ header {
 
 	nav,
 	.hero-section {
-		z-index: 500;
+		z-index: 300;
 	}
 
 	nav {
-		@include displayFlex(row, space-between, center);
-		width: 90%;
-		margin: 1rem 0;
+		@include displayFlex(row, space-around, center);
+		width: 100%;
+		padding: 1rem 5%;
 		.logo {
 			margin-right: auto;
 		}
+		position: fixed;
+		transition: all 150ms ease-in-out;
+		z-index: 500;
 
 		a {
 			margin: 0 2rem;
@@ -54,7 +57,7 @@ header {
 		@include displayFlex(row, center, center);
 		// margin: 15vh 0;
 		width: 90%;
-		// padding-bottom: 5rem;
+		padding-top: 102px;
 
 		.hero-text {
 			color: color(text);
@@ -69,8 +72,6 @@ header {
 
 			button {
 				color: color(primary);
-				font-weight: bold;
-				letter-spacing: 1pt;
 			}
 		}
 
@@ -90,4 +91,9 @@ header {
 			);
 		}
 	}
+}
+
+.navBar-bg {
+	background-color: rgba(84, 64, 192, 1);
+	padding: 0.5rem 5%;
 }

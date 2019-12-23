@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 .main-content {
 	@include displayFlex(column, center, center);
 	margin: 10rem 0;
@@ -17,9 +21,14 @@
 		}
 
 		.content-text {
-			@include displayFlex(column, center, center);
+			@include displayFlex(column, center, flex-start);
 			max-width: 40%;
 			margin: 0 3rem;
+
+			p {
+				font-size: 1.5rem;
+				opacity: 0.7;
+			}
 		}
 
 		&:nth-child(2) {
