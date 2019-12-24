@@ -378,7 +378,8 @@ header {
   align-items: center;
   background-color: #5440c0;
   z-index: 1;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   header nav:nth-child(2) {
     display: none; }
   header nav,
@@ -481,8 +482,6 @@ header > .navBar-bg {
     header .navbar img {
       display: block;
       cursor: pointer; }
-    header .navbar svg {
-      width: 80px; }
     header .navbar .logo {
       margin-left: 0; }
   header nav.burger-menu-open {
