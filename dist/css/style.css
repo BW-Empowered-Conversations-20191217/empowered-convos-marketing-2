@@ -275,16 +275,16 @@ html {
         -webkit-box-align: center;
         align-items: center; }
       .main-content .content-container .content-first-img {
-        width: 37vh;
-        height: 55vh;
+        width: 85vw;
+        height: 120vw;
         margin: 3rem 0; }
       .main-content .content-container .content-third-img {
-        width: 37vh;
-        height: 45vh;
+        width: 85vw;
+        height: 120vw;
         margin: 3rem 0; }
       .main-content .content-container:nth-child(2) .content-second-img {
-        width: 37vh;
-        height: 45vh;
+        width: 85vw;
+        height: 120vw;
         margin: 3rem 0; }
       .main-content .content-container .content-text {
         display: -webkit-box;

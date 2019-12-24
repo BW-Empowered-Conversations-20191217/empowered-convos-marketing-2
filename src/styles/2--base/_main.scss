@@ -90,17 +90,17 @@ html {
 			}
 
 			.content-first-img {
-				@include size(37vh, 55vh);
+				@include size(85vw, 120vw);
 				margin: 3rem 0;
 			}
 			.content-third-img {
-				@include size(37vh, 45vh);
+				@include size(85vw, 120vw);
 				margin: 3rem 0;
 			}
 
 			&:nth-child(2) {
 				.content-second-img {
-					@include size(37vh, 45vh);
+					@include size(85vw, 120vw);
 					margin: 3rem 0;
 				}
 			}
