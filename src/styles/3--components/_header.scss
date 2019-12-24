@@ -18,6 +18,7 @@ header {
 	background-color: color(primary);
 	z-index: 1;
 	position: relative;
+	overflow: hidden;
 
 	// NAVBAR
 
@@ -146,10 +147,6 @@ header > .navBar-bg {
 			img {
 				display: block;
 				cursor: pointer;
-			}
-
-			svg {
-				width: 80px;
 			}
 
 			.logo {
