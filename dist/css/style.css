@@ -378,8 +378,7 @@ header {
   align-items: center;
   background-color: #5440c0;
   z-index: 1;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   header nav:nth-child(2) {
     display: none; }
   header nav,
@@ -396,6 +395,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 1rem 5%;
+    overflow: hidden;
     position: fixed;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
@@ -465,7 +465,7 @@ header > .navBar-bg {
       font-size: 3.5vw; }
       header .hero-section .hero-text h1,
       header .hero-section .hero-text button {
-        margin: 3vh; }
+        margin: 3vh 0; }
     header .hero-section div {
       margin: 0; }
     header .hero-section .hero-img {
