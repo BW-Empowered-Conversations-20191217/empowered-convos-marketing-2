@@ -563,7 +563,7 @@ footer {
   -webkit-box-align: center;
   align-items: center;
   position: relative;
-  z-index: 5;
+  z-index: 0;
   background-color: #5440c0;
   color: #fff;
   padding: 5rem; }
