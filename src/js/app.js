@@ -126,7 +126,7 @@ let ContainerOneScene = new ScrollMagic.Scene({
 	triggerHook: 0,
 	reverse: false
 })
-	.addIndicators()
+	// .addIndicators()
 	.setTween(containerOneTL)
 	.addTo(controller)
 	.offset(-600);
@@ -136,7 +136,7 @@ let ContainerTwoScene = new ScrollMagic.Scene({
 	triggerHook: 0,
 	reverse: false
 })
-	.addIndicators()
+	// .addIndicators()
 	.setTween(containerTwoTL)
 	.addTo(controller)
 	.offset(-600);
@@ -146,7 +146,7 @@ let ContainerThreeScene = new ScrollMagic.Scene({
 	triggerHook: 0,
 	reverse: false
 })
-	.addIndicators()
+	// .addIndicators()
 	.setTween(containerThreeTL)
 	.addTo(controller)
 	.offset(-600);
