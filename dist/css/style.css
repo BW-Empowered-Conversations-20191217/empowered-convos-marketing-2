@@ -159,6 +159,52 @@ html {
 * {
   box-sizing: border-box; }
 
+.hero-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(230deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  z-index: 0; }
+
+.hero-section {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #5440c0; }
+  .hero-section .hero-text {
+    color: #fff;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+    font-size: 1vw;
+    max-width: 800px;
+    z-index: 1; }
+    .hero-section .hero-text h1,
+    .hero-section .hero-text button {
+      margin: 1.5rem 0; }
+    .hero-section .hero-text button {
+      color: #5440c0; }
+  .hero-section div {
+    margin: 3rem; }
+  .hero-section .hero-img {
+    position: relative;
+    top: 18vh;
+    z-index: 1;
+    width: 50vh;
+    height: 65vh;
+    background-image: url("/src/assets/img/man-holding-yellow-sign-with-dots.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
 .main-content {
   display: -webkit-box;
   display: flex;
@@ -252,6 +298,27 @@ html {
     background-position: center; }
 
 @media (max-width: 500px) {
+  .hero-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 100vh;
+    top: -10000px; }
+    .hero-section .hero-text {
+      position: relative;
+      top: -100px;
+      text-align: center;
+      font-size: 3.5vw; }
+      .hero-section .hero-text h1,
+      .hero-section .hero-text button {
+        margin: 3vh 0; }
+    .hero-section div {
+      margin: 0; }
+    .hero-section .hero-img {
+      position: absolute;
+      top: 95vw;
+      width: 80%;
+      height: 100%; }
   .main-content {
     margin-top: 65vw; }
     .main-content .content-container {
@@ -356,16 +423,6 @@ small,
 .text_small {
   font-size: 0.75em; }
 
-header::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(230deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
-  mix-blend-mode: normal;
-  opacity: 0.6;
-  z-index: 0; }
-
 header {
   display: -webkit-box;
   display: flex;
@@ -376,9 +433,9 @@ header {
   justify-content: flex-start;
   -webkit-box-align: center;
   align-items: center;
-  background-color: #5440c0;
-  z-index: 1;
-  position: relative; }
+  z-index: 999;
+  position: fixed;
+  width: 100%; }
   header nav:nth-child(2) {
     display: none; }
   header nav,
@@ -396,7 +453,6 @@ header {
     width: 100%;
     padding: 1rem 5%;
     overflow: hidden;
-    position: fixed;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     z-index: 500; }
@@ -413,39 +469,6 @@ header {
       text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25); }
     header .navbar img {
       display: none; }
-  header .hero-section {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 90%;
-    padding-top: 102px; }
-    header .hero-section .hero-text {
-      color: #fff;
-      text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
-      font-size: 1vw;
-      max-width: 800px; }
-      header .hero-section .hero-text h1,
-      header .hero-section .hero-text button {
-        margin: 1.5rem 0; }
-      header .hero-section .hero-text button {
-        color: #5440c0; }
-    header .hero-section div {
-      margin: 3rem; }
-    header .hero-section .hero-img {
-      position: relative;
-      top: 18vh;
-      width: 50vh;
-      height: 65vh;
-      background-image: url("/src/assets/img/man-holding-yellow-sign-with-dots.webp");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center; }
 
 header > .navBar-bg {
   background-color: #5440c0;
@@ -453,26 +476,6 @@ header > .navBar-bg {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); }
 
 @media (max-width: 500px) {
-  header .hero-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    height: 100vh; }
-    header .hero-section .hero-text {
-      position: relative;
-      top: -100px;
-      text-align: center;
-      font-size: 3.5vw; }
-      header .hero-section .hero-text h1,
-      header .hero-section .hero-text button {
-        margin: 3vh 0; }
-    header .hero-section div {
-      margin: 0; }
-    header .hero-section .hero-img {
-      position: absolute;
-      top: 95vw;
-      width: 80%;
-      height: 100%; }
   header .navbar {
     padding: 1rem 5%; }
     header .navbar a:nth-child(2),
