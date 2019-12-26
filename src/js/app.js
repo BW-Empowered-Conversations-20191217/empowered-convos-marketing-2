@@ -49,7 +49,7 @@ const onLoadTL = gsap.timeline();
 
 onLoadTL
 	.from(header, {
-		duration: 0.8,
+		duration: 0.6,
 		y: 16,
 		opacity: 0,
 		ease: "power3.inOut"
@@ -92,36 +92,61 @@ const secondImgP = document.querySelector("#container2-p");
 const thirdImgP = document.querySelector("#container3-p");
 
 const containerOneTL = gsap.timeline();
+const containerTwoTL = gsap.timeline();
+const containerThreeTL = gsap.timeline();
 
-containerOneTL
-	.from(firstImg, {
-		duration: 0.25,
-		y: 50,
-		opacity: 0,
-		ease: "power3.inOut"
-	})
-	.from(firstImgH3, {
-		duration: 0.25,
-		y: 50,
-		opacity: 0,
-		ease: "power3.inOut",
-		delay: -0.05
-	})
-	.from(firstImgP, {
-		duration: 0.25,
-		y: 50,
-		opacity: 0,
-		ease: "power3.inOut",
-		delay: -0.05
-	});
+containerOneTL.from([firstImg, firstImgH3, firstImgP], {
+	duration: 0.4,
+	y: 50,
+	autoAlpha: 0,
+	ease: "power3.inOut",
+	stagger: 0.2
+});
+
+containerTwoTL.from([secondImg, secondImgH3, secondImgP], {
+	duration: 0.4,
+	y: 50,
+	autoAlpha: 0,
+	ease: "power3.inOut",
+	stagger: 0.2
+});
+
+containerThreeTL.from([thirdImg, thirdImgH3, thirdImgP], {
+	duration: 0.4,
+	y: 50,
+	autoAlpha: 0,
+	ease: "power3.inOut",
+	stagger: 0.2
+});
 
 let controller = new ScrollMagic.Controller();
 
-let scene = new ScrollMagic.Scene({
+let ContainerOneScene = new ScrollMagic.Scene({
 	triggerElement: containerOne,
 	triggerHook: 0,
 	reverse: false
 })
+	.addIndicators()
 	.setTween(containerOneTL)
 	.addTo(controller)
-	.offset(-300);
+	.offset(-600);
+
+let ContainerTwoScene = new ScrollMagic.Scene({
+	triggerElement: containerTwo,
+	triggerHook: 0,
+	reverse: false
+})
+	.addIndicators()
+	.setTween(containerTwoTL)
+	.addTo(controller)
+	.offset(-600);
+
+let ContainerThreeScene = new ScrollMagic.Scene({
+	triggerElement: containerThree,
+	triggerHook: 0,
+	reverse: false
+})
+	.addIndicators()
+	.setTween(containerThreeTL)
+	.addTo(controller)
+	.offset(-600);
