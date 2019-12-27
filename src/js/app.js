@@ -33,7 +33,7 @@ exitBtn.addEventListener("click", () => {
 	gsap.to("#burger-menu", {
 		duration: 0.2,
 		opacity: 0,
-		scale: 0,
+		scale: 0.9,
 		ease: "power3.inOut"
 	});
 });
@@ -90,10 +90,15 @@ const thirdImgH3 = document.querySelector("#container3-title");
 const firstImgP = document.querySelector("#container1-p");
 const secondImgP = document.querySelector("#container2-p");
 const thirdImgP = document.querySelector("#container3-p");
+const cta = document.querySelector('.cta')
+const ctaH2 = document.querySelector('.cta h2')
+const ctaButton = document.querySelector('.cta button')
+const ctaImg = document.querySelector('.cta .cta-img')
 
 const containerOneTL = gsap.timeline();
 const containerTwoTL = gsap.timeline();
 const containerThreeTL = gsap.timeline();
+const ctaTL = gsap.timeline()
 
 containerOneTL.from([firstImg, firstImgH3, firstImgP], {
 	duration: 0.4,
@@ -112,6 +117,14 @@ containerTwoTL.from([secondImg, secondImgH3, secondImgP], {
 });
 
 containerThreeTL.from([thirdImg, thirdImgH3, thirdImgP], {
+	duration: 0.4,
+	y: 50,
+	autoAlpha: 0,
+	ease: "power3.inOut",
+	stagger: 0.2
+});
+
+ctaTL.from([ctaH2, ctaButton, ctaImg], {
 	duration: 0.4,
 	y: 50,
 	autoAlpha: 0,
@@ -148,5 +161,15 @@ let ContainerThreeScene = new ScrollMagic.Scene({
 })
 	// .addIndicators()
 	.setTween(containerThreeTL)
+	.addTo(controller)
+	.offset(-600);
+	
+let ctaScene = new ScrollMagic.Scene({
+	triggerElement: cta,
+	triggerHook: 0,
+	reverse: false
+})
+	// .addIndicators()
+	.setTween(ctaTL)
 	.addTo(controller)
 	.offset(-600);

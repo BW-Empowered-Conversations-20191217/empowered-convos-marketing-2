@@ -76,12 +76,12 @@ header > .navBar-bg {
 		nav.burger-menu-open {
 			@include displayFlex(column, space-around, center);
 			position: fixed;
-			top: 2.5%;
-			height: 95%;
+			top: 3vh;
+			height: 95vh;
 			width: 95%;
 			z-index: 999;
 			background-color: color(primary);
-			transform: scale(0);
+			transform: scale(0.9);
 			opacity: 0;
 			border-radius: 24px;
 
