@@ -19,6 +19,7 @@ html {
 	mix-blend-mode: normal;
 	opacity: 0.6;
 	z-index: 0;
+	padding-top: 10vh;
 }
 
 .hero-section {
@@ -26,7 +27,8 @@ html {
 	// margin: 15vh 0;
 	width: 100%;
 	background-color: rgba(84, 64, 192, 1);
-
+	padding-top: 10vh;
+	
 	.hero-text {
 		color: color(text);
 		@include shadow;
@@ -140,7 +142,7 @@ html {
 	.hero-section {
 		flex-direction: column;
 		height: 100vh;
-		top: -10000px;
+		
 
 		.hero-text {
 			position: relative;
