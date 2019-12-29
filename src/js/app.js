@@ -173,3 +173,10 @@ let ctaScene = new ScrollMagic.Scene({
 	.setTween(ctaTL)
 	.addTo(controller)
 	.offset(-600);
+
+
+
+	//TODO 
+	// - NEED TO CREATE ABOUT PAGE
+	// - NEED TO GET PICTURES FROM SLACK TO SHOW TEAM
+	
