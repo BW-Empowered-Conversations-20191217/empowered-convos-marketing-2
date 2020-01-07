@@ -15,21 +15,19 @@ const exitBtn = document.querySelector("#exit-btn");
 const burgerMenu = document.querySelector("#burger-menu");
 
 burgerBtn.addEventListener("click", () => {
-	if (!burgerMenu.classList.contains("burger-menu-open")) {
-		burgerMenu.classList.add("burger-menu-open");
-		gsap.to("#burger-menu", {
-			duration: 0.15,
-			opacity: 0.98,
-			scale: 1,
-			ease: "power3.inOut"
-		});
-	}
+	burgerMenu.classList.add("burger-menu-open");
+	gsap.to("#burger-menu", {
+		duration: 0.15,
+		opacity: 0.98,
+		scale: 1,
+		ease: "power3.inOut"
+	});
 });
 
 exitBtn.addEventListener("click", () => {
 	setTimeout(() => {
 		burgerMenu.classList.remove("burger-menu-open");
-	}, 300);
+	}, 210);
 	gsap.to("#burger-menu", {
 		duration: 0.2,
 		opacity: 0,
@@ -90,15 +88,15 @@ const thirdImgH3 = document.querySelector("#container3-title");
 const firstImgP = document.querySelector("#container1-p");
 const secondImgP = document.querySelector("#container2-p");
 const thirdImgP = document.querySelector("#container3-p");
-const cta = document.querySelector('.cta')
-const ctaH2 = document.querySelector('.cta h2')
-const ctaButton = document.querySelector('.cta button')
-const ctaImg = document.querySelector('.cta .cta-img')
+const cta = document.querySelector(".cta");
+const ctaH2 = document.querySelector(".cta h2");
+const ctaButton = document.querySelector(".cta button");
+const ctaImg = document.querySelector(".cta .cta-img");
 
 const containerOneTL = gsap.timeline();
 const containerTwoTL = gsap.timeline();
 const containerThreeTL = gsap.timeline();
-const ctaTL = gsap.timeline()
+const ctaTL = gsap.timeline();
 
 containerOneTL.from([firstImg, firstImgH3, firstImgP], {
 	duration: 0.4,
@@ -163,7 +161,7 @@ let ContainerThreeScene = new ScrollMagic.Scene({
 	.setTween(containerThreeTL)
 	.addTo(controller)
 	.offset(-600);
-	
+
 let ctaScene = new ScrollMagic.Scene({
 	triggerElement: cta,
 	triggerHook: 0,
@@ -174,9 +172,6 @@ let ctaScene = new ScrollMagic.Scene({
 	.addTo(controller)
 	.offset(-600);
 
-
-
-	//TODO 
-	// - NEED TO CREATE ABOUT PAGE
-	// - NEED TO GET PICTURES FROM SLACK TO SHOW TEAM
-	
+//TODO
+// - NEED TO CREATE ABOUT PAGE
+// - NEED TO GET PICTURES FROM SLACK TO SHOW TEAM

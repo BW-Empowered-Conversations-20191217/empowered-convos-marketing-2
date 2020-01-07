@@ -28,7 +28,7 @@ html {
 	width: 100%;
 	background-color: rgba(84, 64, 192, 1);
 	padding-top: 115px;
-	
+
 	.hero-text {
 		color: color(text);
 		@include shadow;
@@ -43,6 +43,7 @@ html {
 
 		button {
 			color: color(primary);
+			font-size: 1rem;
 		}
 	}
 
@@ -138,6 +139,20 @@ html {
 	}
 }
 
+@media (max-width: 1000px) {
+	.hero-section {
+		.hero-text {
+			h1 {
+				font-size: 7vw;
+			}
+
+			.btn {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
 @media (max-width: 500px) {
 	.hero-section {
 		flex-direction: column;
@@ -149,10 +164,16 @@ html {
 			position: relative;
 			top: -100px;
 			text-align: center;
-			font-size: 3.5vw;
 			h1,
 			button {
 				margin: 3vh 0;
+			}
+			h1 {
+				font-size: 12vw;
+			}
+
+			button {
+				font-size: 1rem;
 			}
 		}
 
