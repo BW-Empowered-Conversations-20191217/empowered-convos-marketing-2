@@ -487,6 +487,9 @@ header > .navBar-bg {
   padding: 0.5rem 5%;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); }
 
+.noScroll {
+  overflow: hidden; }
+
 @media (max-width: 500px) {
   header .navbar {
     padding: 1rem 5%; }
