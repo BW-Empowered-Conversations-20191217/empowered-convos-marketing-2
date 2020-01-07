@@ -10,12 +10,14 @@ window.addEventListener("scroll", () => {
 
 // OPEN / CLOSE burger menu
 
+const body = document.querySelector("body");
 const burgerBtn = document.querySelector(".burger-btn");
 const exitBtn = document.querySelector("#exit-btn");
 const burgerMenu = document.querySelector("#burger-menu");
 
 burgerBtn.addEventListener("click", () => {
 	burgerMenu.classList.add("burger-menu-open");
+	body.classList.add("noScroll");
 	gsap.to("#burger-menu", {
 		duration: 0.15,
 		opacity: 0.98,
@@ -25,6 +27,7 @@ burgerBtn.addEventListener("click", () => {
 });
 
 exitBtn.addEventListener("click", () => {
+	body.classList.remove("noScroll");
 	setTimeout(() => {
 		burgerMenu.classList.remove("burger-menu-open");
 	}, 210);
