@@ -448,7 +448,8 @@ html {
   .about::after {
     content: none; }
   .about p {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    opacity: 0.9; }
   .about .white-container {
     width: 100%;
     background: #fff;
@@ -465,7 +466,7 @@ html {
         color: rgba(84, 64, 192, 0.7); }
   .about .green-container {
     width: 100%;
-    background: #c2ffe9;
+    background: #ffb4b6;
     margin: 0; }
     .about .green-container .green {
       padding: 0 5%;
@@ -473,10 +474,10 @@ html {
       margin: 7rem auto; }
   .about .pink-container {
     width: 100%;
-    background: #ffb4b6;
-    margin: 0; }
+    background: #c2ffe9;
+    margin: 0;
+    position: relative; }
     .about .pink-container .pink {
-      position: relative;
       display: -webkit-box;
       display: flex;
       -webkit-box-orient: horizontal;
@@ -484,35 +485,79 @@ html {
       flex-direction: row;
       -webkit-box-pack: center;
       justify-content: center;
-      -webkit-box-align: center;
-      align-items: center;
+      -webkit-box-align: start;
+      align-items: flex-start;
       flex-wrap: wrap;
       max-width: 1440px;
       padding: 7rem 0;
-      margin: 0; }
-      .about .pink-container .pink::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: linear-gradient(230deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
-        mix-blend-mode: normal;
-        opacity: 0.6;
-        z-index: 0; }
+      margin: 0 auto; }
     .about .pink-container .card {
       max-width: calc(480px - 6rem);
+      min-height: 680px;
       margin: 0 2rem 4rem;
-      padding: 0 2rem 1rem;
+      padding: 2rem 2rem 1rem;
       -webkit-transition: all 200ms ease-in-out;
       transition: all 200ms ease-in-out;
+      background-color: #fff;
       z-index: 1; }
+      .about .pink-container .card .card-image {
+        height: 300px;
+        width: auto;
+        margin: 0; }
+      .about .pink-container .card .frank {
+        background-image: url("https://i.ibb.co/FwyGtjF/Frank.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .about .pink-container .card .leisha {
+        background-image: url("https://i.ibb.co/p3LqkF2/Leisha.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .about .pink-container .card .vincent {
+        background-image: url('https://i.ibb.co/6XT5xVS/Vincent.png"');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .about .pink-container .card .lee {
+        background-image: url("https://i.ibb.co/VQVrYcV/Lee.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .about .pink-container .card .troy {
+        background-image: url("https://i.ibb.co/jwxqV94/Troy.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .about .pink-container .card .sebastian {
+        background-image: url("https://i.ibb.co/gMhH3y3/Sebastian.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .about .pink-container .card .jennifer {
+        background-image: url("https://i.ibb.co/Vw9YgFm/Jennifer.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
       .about .pink-container .card:hover, .about .pink-container .card:focus {
         -webkit-transform: translateY(-10px);
         transform: translateY(-10px);
-        background-color: #c2ffe9;
         box-shadow: 10px 8px 30px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.1);
         -webkit-transition: all 200ms ease-in-out;
         transition: all 200ms ease-in-out; }
+      .about .pink-container .card p {
+        font-size: 1rem; }
+  .about .pink-container::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(230deg, rgba(255, 255, 255, 0.58) 0.79%, transparent);
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    z-index: 0; }
 
 header {
   display: -webkit-box;
