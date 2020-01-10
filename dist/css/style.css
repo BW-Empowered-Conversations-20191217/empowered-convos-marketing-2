@@ -248,7 +248,9 @@ html {
       display: block;
       width: -webkit-fit-content;
       width: -moz-fit-content;
-      width: fit-content; }
+      width: fit-content;
+      text-decoration: none;
+      cursor: pointer; }
       .hero-section .hero-text .btn:hover {
         color: #fff;
         -webkit-transition-property: color, background-color, border;
@@ -382,19 +384,32 @@ html {
       top: -100px;
       text-align: center; }
       .hero-section .hero-text h1,
-      .hero-section .hero-text button {
+      .hero-section .hero-text .btn {
         margin: 3vh 0; }
       .hero-section .hero-text h1 {
         font-size: 12vw; }
-      .hero-section .hero-text button {
-        font-size: 1rem; }
+      .hero-section .hero-text .btn {
+        font-size: 1rem;
+        margin: 0 auto;
+        z-index: 999; }
+        .hero-section .hero-text .btn:hover, .hero-section .hero-text .btn:focus {
+          color: #fff;
+          -webkit-transition-property: color, background-color, border;
+          transition-property: color, background-color, border;
+          -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+          -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+          background-color: #ffb4b6;
+          border: 2px solid #ffb4b6; }
     .hero-section div {
       margin: 0; }
     .hero-section .hero-img {
       position: absolute;
       top: 95vw;
       width: 80%;
-      height: 100%; }
+      height: 100%;
+      z-index: 0; }
   .main-content {
     margin-top: 65vw; }
     .main-content .content-container {
@@ -473,7 +488,9 @@ html {
     opacity: 0.9; }
   @media (max-width: 500px) {
     .about {
-      height: auto; } }
+      height: auto; }
+      .about h1 {
+        font-size: 12vw; } }
   .about .white-container {
     width: 100%;
     background: #fff;
@@ -668,7 +685,7 @@ header > .navBar-bg {
     padding: 1rem 5%; }
     header .navbar a:nth-child(2),
     header .navbar a:nth-child(3),
-    header .navbar button {
+    header .navbar .btn {
       display: none; }
     header .navbar img {
       display: block;
@@ -694,13 +711,29 @@ header > .navBar-bg {
     transform: scale(0.9);
     opacity: 0; }
     header nav.burger-menu-open a,
-    header nav.burger-menu-open button {
+    header nav.burger-menu-open .btn {
       color: #fff;
       font-size: 2rem;
       text-decoration: none; }
-    header nav.burger-menu-open button {
+    header nav.burger-menu-open .btn {
       border-radius: 50px;
-      padding: 1rem 5rem; }
+      padding: 1rem 5rem;
+      -webkit-transition-property: color, background-color, border;
+      transition-property: color, background-color, border;
+      -webkit-transition-duration: 150ms;
+      transition-duration: 150ms;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out; }
+      header nav.burger-menu-open .btn:hover, header nav.burger-menu-open .btn:focus {
+        color: #fff;
+        -webkit-transition-property: color, background-color, border;
+        transition-property: color, background-color, border;
+        -webkit-transition-duration: 150ms;
+        transition-duration: 150ms;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        background-color: #ffb4b6;
+        border: 2px solid #ffb4b6; }
     header nav.burger-menu-open img {
       position: absolute;
       top: 35px;
