@@ -44,6 +44,14 @@ html {
 		button {
 			color: color(primary);
 			font-size: 1rem;
+			transition: all 150ms ease-in-out;
+
+			&:hover {
+				color: color(text);
+				transition: all 150ms ease-in-out;
+				background-color: color(accent-2);
+				border: 2px solid color(accent-2);
+			}
 		}
 	}
 

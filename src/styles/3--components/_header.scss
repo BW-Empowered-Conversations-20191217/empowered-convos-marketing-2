@@ -33,12 +33,25 @@ header {
 			text-decoration: none;
 			color: color(text);
 			@include shadow;
+			transition: all 150ms ease-in-out;
+
+			&:hover {
+				color: color(accent-2);
+				transition: all 150ms ease-in-out;
+			}
 		}
 
 		button {
 			margin-left: 2rem;
 			color: color(text);
 			@include shadow;
+			transition: all 150ms ease-in-out;
+
+			&:hover {
+				color: color(accent-2);
+				border: 2px solid color(accent-2);
+				transition: all 150ms ease-in-out;
+			}
 		}
 
 		img {

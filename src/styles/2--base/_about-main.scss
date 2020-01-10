@@ -10,6 +10,10 @@
 		opacity: 0.9;
 	}
 
+	@media (max-width: 500px) {
+		height: auto;
+	}
+
 	.white-container {
 		width: 100%;
 		background: color(bg);
@@ -20,12 +24,26 @@
 			max-width: 1440px;
 			margin: 7rem auto;
 			color: color(primary);
+
+			@media (max-width: 500px) {
+				margin: 5rem auto;
+			}
+
 			h1 {
 				text-align: center;
 				margin: 1em;
+
+				@media (max-width: 500px) {
+					text-align: center;
+					margin: 0 0 4rem;
+				}
 			}
 			p {
 				color: rgba(84, 64, 192, 0.7);
+
+				@media (max-width: 500px) {
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -34,6 +52,7 @@
 		width: 100%;
 		background: color(accent-2);
 		margin: 0;
+		text-align: center;
 
 		.green {
 			padding: 0 5%;
@@ -49,7 +68,7 @@
 		position: relative;
 
 		.pink {
-			@include displayFlex(row, center, flex-start);
+			@include displayFlex(row, center, space-between);
 			flex-wrap: wrap;
 			max-width: 1440px;
 			padding: 7rem 0;
@@ -57,9 +76,10 @@
 		}
 
 		.card {
-			max-width: calc(480px - 6rem);
+			max-width: calc(450px - 6rem);
+			min-width: calc(450px - 6rem);
 			min-height: 680px;
-			margin: 0 2rem 4rem;
+			margin: 0 1rem 2rem;
 			padding: 2rem 2rem 1rem;
 			transition: all 200ms ease-in-out;
 			background-color: color(text);
