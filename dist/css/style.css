@@ -357,6 +357,8 @@ html {
   .cta .large-btn,
   .cta .cta-img {
     margin: 1em; }
+  .cta .large-btn {
+    text-decoration: none; }
   .cta .cta-img {
     margin: 10rem 0;
     width: 80%;
