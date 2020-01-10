@@ -233,17 +233,30 @@ html {
     max-width: 800px;
     z-index: 1; }
     .hero-section .hero-text h1,
-    .hero-section .hero-text button {
+    .hero-section .hero-text .btn {
       margin: 1.5rem 0; }
-    .hero-section .hero-text button {
+    .hero-section .hero-text .btn {
       color: #5440c0;
       font-size: 1rem;
-      -webkit-transition: all 150ms ease-in-out;
-      transition: all 150ms ease-in-out; }
-      .hero-section .hero-text button:hover {
+      -webkit-transition-property: color, background-color, border;
+      transition-property: color, background-color, border;
+      -webkit-transition-duration: 150ms;
+      transition-duration: 150ms;
+      -webkit-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      text-shadow: none;
+      display: block;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; }
+      .hero-section .hero-text .btn:hover {
         color: #fff;
-        -webkit-transition: all 150ms ease-in-out;
-        transition: all 150ms ease-in-out;
+        -webkit-transition-property: color, background-color, border;
+        transition-property: color, background-color, border;
+        -webkit-transition-duration: 150ms;
+        transition-duration: 150ms;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
         background-color: #ffb4b6;
         border: 2px solid #ffb4b6; }
   .hero-section div {
@@ -628,13 +641,13 @@ header {
         color: #ffb4b6;
         -webkit-transition: all 150ms ease-in-out;
         transition: all 150ms ease-in-out; }
-    header .navbar button {
+    header .navbar .btn {
       margin-left: 2rem;
       color: #fff;
       text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
       -webkit-transition: all 150ms ease-in-out;
       transition: all 150ms ease-in-out; }
-      header .navbar button:hover {
+      header .navbar .btn:hover {
         color: #ffb4b6;
         border: 2px solid #ffb4b6;
         -webkit-transition: all 150ms ease-in-out;

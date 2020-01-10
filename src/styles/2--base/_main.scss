@@ -37,18 +37,25 @@ html {
 		z-index: 1;
 
 		h1,
-		button {
+		.btn {
 			margin: 1.5rem 0;
 		}
 
-		button {
+		.btn {
 			color: color(primary);
 			font-size: 1rem;
-			transition: all 150ms ease-in-out;
+			transition-property: color, background-color, border;
+			transition-duration: 150ms;
+			transition-timing-function: ease-in-out;
+			text-shadow: none;
+			display: block;
+			width: fit-content;
 
 			&:hover {
 				color: color(text);
-				transition: all 150ms ease-in-out;
+				transition-property: color, background-color, border;
+				transition-duration: 150ms;
+				transition-timing-function: ease-in-out;
 				background-color: color(accent-2);
 				border: 2px solid color(accent-2);
 			}

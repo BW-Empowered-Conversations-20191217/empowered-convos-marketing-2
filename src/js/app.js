@@ -43,7 +43,7 @@ exitBtn.addEventListener("click", () => {
 
 const header = document.querySelector("header");
 const h1Hero = document.querySelector(".hero-text h1");
-const btnHero = document.querySelector(".hero-text button");
+const btnHero = document.querySelector(".hero-text .btn");
 const imgHero = document.querySelector(".hero-img");
 
 const onLoadTL = gsap.timeline();
@@ -67,7 +67,7 @@ onLoadTL
 		y: 60,
 		opacity: 0,
 		ease: "power3.out",
-		delay: -0.2
+		delay: -0.1
 	})
 	.from(imgHero, {
 		duration: 0.4,
