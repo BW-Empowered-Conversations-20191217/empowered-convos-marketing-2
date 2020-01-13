@@ -93,7 +93,7 @@ const secondImgP = document.querySelector("#container2-p");
 const thirdImgP = document.querySelector("#container3-p");
 const cta = document.querySelector(".cta");
 const ctaH2 = document.querySelector(".cta h2");
-const ctaButton = document.querySelector(".cta button");
+const ctaButton = document.querySelector(".cta a");
 const ctaImg = document.querySelector(".cta .cta-img");
 
 const containerOneTL = gsap.timeline();
